@@ -66,15 +66,14 @@ onUpdated(() => {
 
 <style scoped>
 h1 {
+  color: var(--color-heading);
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 30px;
 }
-
 h3 {
   font-size: 1.2rem;
 }
-
 .blog{
   display: flex;
   flex-direction: column;
@@ -90,15 +89,15 @@ h3 {
   position: relative;
   margin-bottom: 30px;
 }
-
 .blog-item .title{
+  color: var(--color-heading);
   font-weight: 700;
-  size: 16px;
+  font-size: 16px;
 }
 .blog-item .content{
-  color: #000;
+  color: var(--color-text);
   font-weight: 500;
-  size: 14px;
+  font-size: 14px;
 }
 .blog-item .thumbnail {
   margin-right: 20px;
@@ -110,12 +109,10 @@ h3 {
 .btn{
   cursor: pointer;
 }
-
 .pagination{
   display: flex;
   flex-direction: row;
 }
-
 .pagination button{
   background: none;
 	color: inherit;
@@ -133,5 +130,6 @@ h3 {
 .pagination button.active{
   background: #D5FFFA;
   cursor: not-allowed;
+  color: #000;
 }
 </style>

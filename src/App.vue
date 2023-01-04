@@ -16,6 +16,10 @@ import { RouterView } from "vue-router";
   margin: 0 auto;
 }
 
+body{
+  background: red;
+}
+
 @media (min-width: 1200px) {
   .container{
   max-width: 1200px;

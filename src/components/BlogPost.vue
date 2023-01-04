@@ -47,7 +47,7 @@ onUpdated(() => {
     <div class="featured-image">
       <img :src="getPhotoById(postId)?.url"/>
     </div>
-    <p>{{ postInfo?.body }}</p>
+    <p class="content">{{ postInfo?.body }}</p>
     <button class="navigation-button nav-prev" @click="prevPost()" v-if="postId - 1 > 0">Предыдущий пост</button>
     <button class="navigation-button nav-next" @click="nextPost()" v-if="postId + 1 < 100">Следующий пост</button>
   </div>
@@ -60,9 +60,10 @@ onUpdated(() => {
   top: 50px;
 }
 .breadcrumps a{
-  color: #C6C6C6;
+  color: var(--color-text);
 }
 .breadcrumps .current-link{
+  color: var(--color-text);
   font-weight: 500;
 }
 .blogpost{
@@ -71,11 +72,14 @@ onUpdated(() => {
   position: relative;
   padding: 100px 0;
 }
-
 .blogpost .title{
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 20px;
+  color: var(--color-heading);
+}
+.blogpost .content{
+  color: var(--color-text);
 }
 .blogpost .featured-image img{
   border-radius: 24px;
@@ -84,7 +88,7 @@ onUpdated(() => {
 
 .navigation-button{
   background: none;
-	color: #4383FF;
+	color: var(--color-link);
 	border: none;
 	padding: 0;
 	font: inherit;
